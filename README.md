@@ -1,9 +1,9 @@
 # Projeto de Avaliação - AV2  
 ## Clínica de Estética - 3DAW  
 
-Este repositório contém o projeto da AV2, desenvolvido pelos alunos como parte da avaliação final. O objetivo é criar uma aplicação web de uma Clínica de Estética que implemente o prototipo de 1IHM desenvolvido pelo aluno.
+Este repositório contém o projeto da AV2, desenvolvido pelos alunos como parte da avaliação. O objetivo é criar uma aplicação web de uma Clínica de Estética que implemente o protótipo de 1IHM desenvolvido pelos alunos.
 
-O projeto tentara se manter fiel ao design e implementacao proposta do seguinte prototipo [AV2 - IHM](https://www.figma.com/design/SvR3Xqm9DsA5Cd4TjNym4Y/3DAW---AV2?m=auto&t=lxYsC5y6LmiRQRv9-6).
+O projeto tentará se manter fiel ao design e implementação proposta do seguinte protótipo [AV2 - IHM](https://www.figma.com/design/SvR3Xqm9DsA5Cd4TjNym4Y/3DAW---AV2?m=auto&t=lxYsC5y6LmiRQRv9-6).
 
 ## Requisitos do Projeto  
 
