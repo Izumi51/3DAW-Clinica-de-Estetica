@@ -3,19 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/CSS/sytle.css">
+    <link rel="stylesheet" href="assets/CSS/style.css">
     <script src="src/js/script.js"></script>
     <title>Admin</title>
 </head>
 <body>
     <header>
-        <h1>Admin: Filipe</h1>
         <ul>
-            <li><a href="index.html">Funcionarios</a></li>
-            <li><h1>SAIR</h1></li>
+            <li><h2>Admin: Filipe</h2></li>
+            <li><a href="index.html">FUNCIONÁRIOS</a></li>
+            <li><h2>SAIR</h2></li>
         </ul>
     </header>
 
-    <main></main>
+    <main>
+        <h1>Quadro de Funcionários</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Setor</th>
+                    <th>CPF</th>
+                    <th>Salario</th>
+                    <th>Excluir</th>
+                    <th>Alterar</th>
+                </tr>
+            </thead>
+            <tbody id="tabelaFuncionarios">
+            </tbody>
+        </table>
+    </main>
 </body>
 </html>
