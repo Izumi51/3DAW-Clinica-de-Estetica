@@ -12,3 +12,5 @@
 	
 	axios ou o fetch do javascript?
 	ajax?
+
+	oioi
