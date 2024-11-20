@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/CSS/style.css">
+    <script src="src/js/script.js"></script>
+    <title>Admin</title>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><h2>Admin: Filipe</h2></li>
+            <li><h2>SAIR</h2></li>
+        </ul>
+    </header>
+
+    <main onload="listarTodos()">
+        <section>
+            <h1>Quadro de Funcionários</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Setor</th>
+                        <th>CPF</th>
+                        <th>Salario</th>
+                        <th>Excluir</th>
+                        <th>Alterar</th>
+                    </tr>
+                </thead>
+                <tbody id="tabelaFuncionarios">
+                </tbody>
+            </table>
+
+            <div class="btn-end">
+                <button id="showIncludeTable" class="btn-act" onclick="displayIncluir()">+</button>
+                <button id="hideIncludeTable" class="btn-act" onclick="hideIncluir()" style="display: none;">-</button>
+            </div>
+        </section>
+
+        <section id="includeTable" style="display: none;">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Setor</th>
+                        <th>CPF</th>
+                        <th>Salario</th>
+                    </tr>
+                </thead>
+                <tbody id="novoFuncionario">
+                    <tr>
+                        <th><input type="text" name="nome" id="nomeFunc"></th>
+                        <th><input type="text" name="setor" id="setorFunc"></th>
+                        <th><input type="text" name="cpf" id="cpfFunc"></th>
+                        <th><input type="text" name="salario" id="salarioFunc"></th>
+                    </tr>
+                </tbody>
+            </table>
+    
+            <div class="btn-end">
+                <button class="btn-act" onclick="incluir()">Novo Funcionário</button>
+            </div>
+        </section>
+
+        <section style="display: none;" class="formAlterar" id="altFunc">
+            <div>
+                <h1>Alterar</h1>
+                <form action="" method="POST">
+                    <label for="novoSetor">Novo Setor: </label><br>
+                        <input type="text" name="novoSetor" id="novoSetor" required>
+                    <br><br>
+                    <label for="novoSalario">Novo Salario: </label><br>
+                        <input type="number" step="0.01" name="novoSalario" id="novoSalario"  placeholder="Ex: 1201.23" required>
+                    <br><br>
+                    <button id="altForm" type="submit">Alterar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
