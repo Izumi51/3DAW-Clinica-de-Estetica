@@ -1,3 +1,208 @@
 body, html {
     height: 0;
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #fdeeea;
+    color: #333;
+    line-height: 1.6;
+}
+
+main {
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fdd4d4;
+    padding: 10px 20px;
+}
+
+header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #000;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff6b6b;
+}
+
+.login-btn {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #444;
+}
+
+.objetivo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.objetivo .texto {
+    max-width: 60%;
+}
+
+.objetivo h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.objetivo p {
+    text-align: justify;
+}
+
+.objetivo .imagem img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.conheca {
+    background-color: #fdeeea;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.conheca h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    padding: 20px;
+    text-align: center;
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.card p {
+    margin: 15px 0;
+    font-size: 0.9em;
+}
+
+.card a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.card a:hover {
+    color: #0056b3;
+}
+
+.interativos {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+    gap: 20px;
+}
+
+.interativos .btn {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.interativos .btn:hover {
+    background-color: #444;
+}
+
+/* Rodapé */
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-content .btn-trabalhe {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-content .btn-trabalhe:hover {
+    background-color: #0056b3;
+}
+
+.footer-content .contact p,
+.footer-content .payment p {
+    margin: 5px 0;
+}
+
+.footer-content img {
+    margin: 5px;
+    width: 60px;
+    height: 40px;
+}
