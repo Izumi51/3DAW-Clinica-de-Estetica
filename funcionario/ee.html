@@ -15,7 +15,7 @@
         </ul>
     </header>
 
-    <main onload="listarTodos()">
+    <main>
         <section>
             <h1>Quadro de Funcionários</h1>
             <table>
@@ -52,14 +52,14 @@
                 </thead>
                 <tbody id="novoFuncionario">
                     <tr>
-                        <th><input type="text" name="nome" id="nomeFunc"></th>
+                        <th><input type="text" name="nome" id="nomeFunc" required></th>
                         <th><input type="text" name="setor" id="setorFunc"></th>
-                        <th><input type="text" name="cpf" id="cpfFunc"></th>
-                        <th><input type="text" name="salario" id="salarioFunc"></th>
+                        <th><input type="number" pattern="\d{11}" name="cpf" id="cpfFunc" placeholder="" required></th>
+                        <th><input type="text" pattern="\d+(\.\d{2})?" step="0.01" name="salario" id="salarioFunc"></th>
                     </tr>
                 </tbody>
             </table>
-    
+            <p id="msgErro" style="color: red;"></p>
             <div class="btn-end">
                 <button class="btn-act" onclick="incluir()">Novo Funcionário</button>
             </div>
@@ -70,13 +70,14 @@
                 <h1>Alterar</h1>
                 <form action="" method="POST">
                     <label for="novoSetor">Novo Setor: </label><br>
-                        <input type="text" name="novoSetor" id="novoSetor" required>
+                        <input type="text" name="novoSetor" id="novoSetor">
                     <br><br>
                     <label for="novoSalario">Novo Salario: </label><br>
-                        <input type="number" step="0.01" name="novoSalario" id="novoSalario"  placeholder="Ex: 1201.23" required>
+                        <input type="text" pattern="\d+(\.\d{2})?" step="0.01" name="novoSalario" id="novoSalario"  placeholder="Ex: 1201.23">
                     <br><br>
-                    <button id="altForm" type="submit">Alterar</button>
+                    <button class="altForm" id="altForm" type="submit">Alterar</button>
                 </form>
+                <p id="msgErroAlt" style="width: auto; color: red;"></p>
             </div>
         </section>
     </main>

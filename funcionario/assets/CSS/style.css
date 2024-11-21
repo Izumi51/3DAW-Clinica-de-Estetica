@@ -64,9 +64,12 @@ h1 {
 }
 
 table {
+    width: 100%;
+    max-width: 100%;
     margin: auto;
     background-color: var(--white);
     scrollbar-width: auto;
+    
 }
 
 table, tbody, thead, th, td {
@@ -82,12 +85,14 @@ table, tbody, thead, th, td {
     border-radius: 5px;
     background-color: rgb(35, 35, 209);
     color: var(--white);
+    cursor: pointer;
 }
 
 .btn-alterar:hover {
     border: 2px solid rgb(35, 35, 209);
     background-color: var(--white);
     color: rgb(35, 35, 209);
+    cursor: pointer;
 }
 
 .btn-excluir {
@@ -95,17 +100,20 @@ table, tbody, thead, th, td {
     border-radius: 5px;
     background-color: rgb(224, 32, 32);
     color: var(--white);
+    cursor: pointer;
 }
 
 .btn-excluir:hover {
     border: 2px solid rgb(224, 32, 32);
     background-color: var(--white);
     color: rgb(224, 32, 32);
+    cursor: pointer;
 }
 
 .btn-end {
     display: flex;
     justify-content: end;
+    cursor: pointer;
 }
 
 .btn-act {
@@ -116,6 +124,11 @@ table, tbody, thead, th, td {
     border: 2px solid;
     background-color: var(--black);
     color: var(--white);
+    cursor: pointer;
+}
+
+.altForm {
+    cursor: pointer;
 }
 
 .btn-act:hover {
@@ -123,19 +136,31 @@ table, tbody, thead, th, td {
     border: 2px solid var(--black);
     background-color: var(--white);
     color: var(--black);
+    cursor: pointer;
 }
 
 .formAlterar {
     display: flex;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     margin-top: 20px;
 }
 
 .formAlterar div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 300px;
     padding: 15px;
     border: 2px solid var(--black);
     border-radius: 15px;
     background-color: var(--white);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
 }
