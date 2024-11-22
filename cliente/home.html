@@ -4,18 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Clínica Estética</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/CSS/style.css">
 </head>
+
 <body>
-    <header>
-        <div class="logo">Logo Clínica Estética</div>
-        <nav>
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="sobre.html" class="active">Sobre</a></li>
-                <li><a href="servicos.html">Serviços</a></li>
-            </ul>
-        </nav>     
+    <header class="svg-container">
+        <svg viewBox="0 0 1920 253" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M-9.1543 -26.665L1920.54 -84.5264L1927.89 160.53C1139.74 334.345 1257.51 12.7409 -0.784692 252.463L-9.1543 -26.665Z" fill="#F8C5D3" fill-opacity="0.79"/>
+        </svg>
+        <svg viewBox="0 0 1920 219" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0H1920V187C1131.33 301.5 1258 59 0 213V0Z" fill="#F6D8E0" fill-opacity="0.7"/>
+        </svg>
+
+        <section class="nav-container">    
+            <div class="logo">Divine Care</div>
+            <nav>
+                <a class="active" href="home.html">Home</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="servicos.html">Serviços</a>
+            </nav>
+        </section> 
     </header>
 
     <main>
@@ -31,44 +39,46 @@
                 </p>
             </article>
             <div class="imagem">
-                <img src="" alt="Cliente satisfeita no salão">
+                <img src="assets/images/image.png" alt="Cliente satisfeita no salão">
             </div>
         </section>
 
-            <!-- Conheça um pouco -->
+        <div class="vertical-line"></div>
+
+        <!-- Conheça um pouco -->
         <section class="conheca">
             <h2>Conheça um pouco</h2>
             <div class="cards">
                 <div class="card">
-                    <img src="" alt="Serviço 1">
+                    <img src="assets/images/image (1).png" alt="Serviço 1">
                     <p>
                         Oferecemos um serviço exclusivo de transformação capilar personalizada, dedicado a 
                         realçar sua beleza única e refletir seu estilo individual. Este serviço abrange corte, 
                         estilização e confiança.
                     </p>
-                    <a href="">Contrate este serviço</a>
+                    <a class="contrate-servico" href="">Contrate este serviço</a>
                 </div>
                 <div class="card">
-                    <img src="" alt="Serviço 2">
+                    <img src="assets/images/image (2).png" alt="Serviço 2">
                     <p>
                         Um serviço exclusivo de manicure e pedicure, proporcionando uma experiência indulgente 
                         e relaxante para cuidar das suas unhas. Beleza e bem-estar em um só momento.
                     </p>
-                    <a href="">Contrate este serviço</a>
+                    <a class="contrate-servico" href="">Contrate este serviço</a>
                 </div>
                 <div class="card">
-                    <img src="" alt="Serviço 3">
+                    <img src="assets/images/image (3).png" alt="Serviço 3">
                     <p>
                         Apresentamos um serviço de maquiagem personalizada, projetado para realçar sua beleza 
                         única e criar looks deslumbrantes para todas as ocasiões. 
                     </p>
-                    <a href="">Contrate este serviço</a>
+                    <a class="contrate-servico" href="">Contrate este serviço</a>
                 </div>
             </div>
         </section>
 
         <div class="interativo">
-            <a href="#" class="btn">Nossos serviços →</a>
+            <a href="servicos.html" class="btn">Nossos serviços →</a>
         </div>
     </main>
 
