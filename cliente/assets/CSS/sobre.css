@@ -57,7 +57,7 @@ body {
 
 .nav-container {
     position: absolute;
-    top: 40px;
+    top: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -84,32 +84,89 @@ main {
     margin: auto;
 }
 
-.descricao {
+.sobre {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
-    flex-direction: row;
+    justify-content: center;
+    margin: 50px;
 }
 
-.inverse {
-    flex-direction: row-reverse; 
+.sobre h1 {
+    margin: 20px;
+    width: 250px;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 2.5rem;
+    font-weight: lighter;
 }
 
-.img-text {
-    aspect-ratio: 1/1;
-    max-width: 30%;
-    border-radius: 10px;
+.place {
+    max-width: 300px;
+    font-size: 2.5rem;
+    font-weight: lighter;
+    border-radius: 20px;
 }
+
+.place--top {
+    margin-top: 60px;
+}
+
+.place--bottom {
+    margin-bottom: 60px;
+}
+
+.logo-central {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-central img {
+    width: 400px;
+}
+
 /* linha vertical */
 .vertical-line {
     width: 2px;
     height: 150px;
     background-color: black;
-    margin: 0 auto;
+    margin: 20px auto;
+}
+
+.descricao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 80%;
+    margin: 30px auto;
+}
+
+
+.inverse {
+    flex-direction: row-reverse; 
+}
+
+.desc-text {
+    padding: 50px;
+    text-align: justify;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.desc-text strong {
+    color: var(--black);
+}
+.img-text {
+    aspect-ratio: 1/1;
+    max-width: 35%;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Rodapé */
 footer {
+    margin-top: 50px;
     background-color: var(--black);
     color: var(--white);
     padding: 20px 0;

@@ -57,7 +57,7 @@ body {
 
 .nav-container {
     position: absolute;
-    top: 40px;
+    top: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
