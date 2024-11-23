@@ -3,7 +3,7 @@
 
 Este repositório contém o projeto da AV2, desenvolvido pelos alunos como parte da avaliação. O objetivo é criar uma aplicação web de uma Clínica de Estética que implemente o protótipo de 1IHM desenvolvido pelos alunos.
 
-O projeto tentará se manter fiel ao design e implementação proposta do seguinte protótipo [AV2 - IHM](https://www.figma.com/design/SvR3Xqm9DsA5Cd4TjNym4Y/3DAW---AV2?m=auto&t=lxYsC5y6LmiRQRv9-6).
+O projeto tentará se manter fiel ao design e implementação proposta do seguinte protótipo [AV2 - IHM](https://www.figma.com/proto/hvlizFQvGqGWyGVuxY8Tiz/IHM---AV2?type=design&node-id=10-154&t=Ax5fSH8XIvHhjQt8-0&scaling=scale-down-width&starting-point-node-id=10%3A154).
 
 ## Requisitos do Projeto  
 

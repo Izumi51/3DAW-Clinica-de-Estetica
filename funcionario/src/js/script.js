@@ -1,3 +1,7 @@
+document.addEventListener("DOMContentLoaded", () => {
+    listarTodos();
+});
+
 function incluir() {
     let nome = document.getElementById("nomeFunc").value;
     let setor = document.getElementById("setorFunc").value;
@@ -178,10 +182,6 @@ function hideIncluir() {
     document.getElementById("showIncludeTable").style.display = "block";
     document.getElementById("hideIncludeTable").style.display = "none";
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-    listarTodos();
-});
 
 function displayAlterar(id) {
     hideIncluir();
