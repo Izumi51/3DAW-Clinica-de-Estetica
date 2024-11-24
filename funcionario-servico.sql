@@ -22,7 +22,8 @@ INSERT INTO funcionario (nome, setor, cpf, salario) VALUES
 -- SERVICO DATA E HORARIO
 CREATE TABLE servico (
     idServico       INTEGER AUTO_INCREMENT NOT NULL PRIMARY KEY,
-    tipo            VARCHAR(15),
+    tipo            VARCHAR(30),
+    descricao       VARCHAR(255),
     altImagem       VARCHAR(255),
     caminho         VARCHAR(255),
     nomeFuncionario VARCHAR(30),
@@ -46,67 +47,83 @@ CREATE TABLE horario (
     FOREIGN KEY (idData) REFERENCES data(idData)
 );
 
-INSERT INTO servico (tipo, altImagem, caminho, nomeFuncionario, preco)
-VALUES ('Corte de cabelo', 'corte.jpg', '/imagens/corte.jpg', 'João Silva', 50.00);
+-- -- Consultar todos os horários disponíveis para um serviço específico em uma data:
+-- SELECT h.horarioInicio, h.horarioFim, h.status
+-- FROM horario h
+-- JOIN data d ON h.idData = d.idData
+-- JOIN servico s ON d.idServico = s.idServico
+-- WHERE s.tipo = 'Corte de cabelo' AND d.dataServico = '2024-11-23' AND h.status = 'Disponível';
 
-INSERT INTO data (idServico, dataServico, descricao)
-VALUES (1, '2024-11-23', 'Serviço de corte de cabelo');
+-- -- Marcar um horário como "Agendado" (por exemplo, para o horário das 09:00 às 09:30): 
+-- UPDATE horario
+-- SET status = 'Agendado'
+-- WHERE idData = 1 AND horarioInicio = '09:00:00';
 
-INSERT INTO horario (idData, horarioInicio, horarioFim, status)
-VALUES (1, '09:00:00', '09:30:00', 'Disponível'),
-       (1, '09:30:00', '10:00:00', 'Disponível'),
-       (1, '10:00:00', '10:30:00', 'Disponível');
+-- Inserir 20 serviços
+INSERT INTO servico (tipo, descricao, altImagem, caminho, nomeFuncionario, preco) VALUES
+('Corte de Cabelo', 'Corte de cabelo masculino moderno, com acabamento impecável.', 'corte.jpg', '/images', 'Carlos', 50.00),
+('Corte de Cabelo', 'Corte de cabelo feminino com design de ponta e estilo personalizado.', 'corte_fem.jpg', '/images', 'Maria', 65.00),
+('Manicure', 'Manicure e pedicure com esmalte de longa duração e cuidados especiais.', 'manicure.jpg', '/images', 'Ana', 30.00),
+('Pedicure', 'Pedicure com design moderno e hidratação profunda dos pés.', 'pedicure.jpg', '/images', 'Juliana', 35.00),
+('Barba', 'Modelagem e corte de barba, com acabamento preciso.', 'barba.jpg', '/images', 'Carlos', 20.00),
+('Depilação', 'Depilação com cera quente, ideal para peles sensíveis.', 'depilacao.jpg', '/images', 'Fernanda', 40.00),
+('Maquiagem', 'Maquiagem profissional para festas e eventos.', 'maquiagem.jpg', '/images', 'Camila', 120.00),
+('Penteado', 'Penteado para eventos especiais, como casamentos ou festas.', 'penteado.jpg', '/images', 'Paula', 80.00),
+('Corte de Cabelo', 'Corte de cabelo infantil, com design suave e cuidadoso.', 'corte_infantil.jpg', '/images', 'Gustavo', 40.00),
+('Limpeza de Pele', 'Limpeza de pele profunda para remover impurezas e hidratar.', 'limpeza_pele.jpg', '/images', 'Laura', 50.00),
+('Corte de Cabelo', 'Corte de cabelo masculino estilo clássico.', 'corte_classico.jpg', '/images', 'Paulo', 45.00),
+('Barba', 'Design de barba com estilo moderno.', 'design_barba.jpg', '/images', 'Marcelo', 25.00),
+('Corte de Cabelo', 'Corte de cabelo feminino com repicado e volume.', 'corte_repicado.jpg', '/images', 'Larissa', 60.00),
+('Depilação', 'Depilação completa com cera fria, ideal para peles delicadas.', 'depilacao_completa.jpg', '/images', 'Viviane', 50.00),
+('Manicure', 'Manicure com aplicação de esmalte em gel, ideal para durabilidade.', 'manicure_gel.jpg', '/images', 'Carla', 35.00),
+('Maquiagem', 'Maquiagem para noivas, com acabamento perfeito.', 'maquiagem_noiva.jpg', '/images', 'Renata', 150.00),
+('Penteado', 'Penteado para formaturas e eventos de gala.', 'penteado_gala.jpg', '/images', 'Patricia', 90.00),
+('Limpeza de Pele', 'Limpeza de pele facial, com extração e hidratação.', 'limpeza_pele_facial.jpg', '/images', 'Sara', 55.00),
+('Corte de Cabelo', 'Corte de cabelo moderno, com textura e estilo.', 'corte_texturizado.jpg', '/images', 'Joaquim', 50.00),
+('Corte de Cabelo', 'Corte de cabelo feminino com franja e estilo elegante.', 'corte_franja.jpg', '/images', 'Clara', 55.00);
 
--- Consultar todos os horários disponíveis para um serviço específico em uma data:
-SELECT h.horarioInicio, h.horarioFim, h.status
-FROM horario h
-JOIN data d ON h.idData = d.idData
-JOIN servico s ON d.idServico = s.idServico
-WHERE s.tipo = 'Corte de cabelo' AND d.dataServico = '2024-11-23' AND h.status = 'Disponível';
+-- Inserir 20 datas
+INSERT INTO data (idServico, dataServico, descricao) VALUES
+(1, '2024-12-01', 'Corte de cabelo masculino'),
+(2, '2024-12-01', 'Corte de cabelo feminino'),
+(3, '2024-12-02', 'Manicure e pedicure'),
+(4, '2024-12-02', 'Pedicure'),
+(5, '2024-12-03', 'Modelagem e corte de barba'),
+(6, '2024-12-03', 'Depilação'),
+(7, '2024-12-04', 'Maquiagem profissional'),
+(8, '2024-12-04', 'Penteado para evento'),
+(9, '2024-12-05', 'Corte de cabelo infantil'),
+(10, '2024-12-05', 'Limpeza de pele'),
+(11, '2024-12-06', 'Corte de cabelo clássico'),
+(12, '2024-12-06', 'Design de barba'),
+(13, '2024-12-07', 'Corte de cabelo repicado'),
+(14, '2024-12-07', 'Depilação completa'),
+(15, '2024-12-08', 'Manicure em gel'),
+(16, '2024-12-08', 'Maquiagem para noivas'),
+(17, '2024-12-09', 'Penteado para formaturas'),
+(18, '2024-12-09', 'Limpeza de pele facial'),
+(19, '2024-12-10', 'Corte de cabelo texturizado'),
+(20, '2024-12-10', 'Corte de cabelo com franja');
 
--- Marcar um horário como "Agendado" (por exemplo, para o horário das 09:00 às 09:30): 
-UPDATE horario
-SET status = 'Agendado'
-WHERE idData = 1 AND horarioInicio = '09:00:00';
-
--- Inserir dados na tabela servico
-INSERT INTO servico (tipo, altImagem, caminho, nomeFuncionario, preco)
-VALUES
-    ('Corte de cabelo', 'corte.jpg', 'caminho/corte', 'Carlos Silva', 50.00),
-    ('Manicure', 'manicure.jpg', 'caminho/manicure', 'Ana Costa', 40.00),
-    ('Massagem', 'massagem.jpg', 'caminho/massagem', 'Mariana Alves', 120.00),
-    ('Pedicure', 'pedicure.jpg', 'caminho/pedicure', 'Luciana Souza', 45.00),
-    ('Hidratação capilar', 'hidratacao.jpg', 'caminho/hidratacao', 'Carlos Silva', 80.00),
-    ('Design de sobrancelha', 'sobrancelha.jpg', 'caminho/sobrancelha', 'Ana Costa', 30.00),
-    ('Depilação', 'depilacao.jpg', 'caminho/depilacao', 'Mariana Alves', 60.00),
-    ('Barba', 'barba.jpg', 'caminho/barba', 'Carlos Silva', 25.00),
-    ('Maquiagem', 'maquiagem.jpg', 'caminho/maquiagem', 'Luciana Souza', 100.00),
-    ('Corte infantil', 'corte_infantil.jpg', 'caminho/corte_infantil', 'Mariana Alves', 40.00);
-
--- Inserir dados na tabela data (relacionando com os serviços já inseridos)
-INSERT INTO data (idServico, dataServico, descricao)
-VALUES
-    (1, '2024-11-25', 'Corte de cabelo masculino'),
-    (2, '2024-11-26', 'Manicure para noivas'),
-    (3, '2024-11-27', 'Massagem relaxante'),
-    (4, '2024-11-28', 'Pedicure estética'),
-    (5, '2024-11-29', 'Hidratação capilar intensa'),
-    (6, '2024-11-30', 'Design de sobrancelhas para formatura'),
-    (7, '2024-12-01', 'Depilação completa'),
-    (8, '2024-12-02', 'Corte de barba e cabelo'),
-    (9, '2024-12-03', 'Maquiagem para evento'),
-    (10, '2024-12-04', 'Corte infantil para meninos');
-
--- Inserir dados na tabela horario (relacionando com as datas já inseridas)
-INSERT INTO horario (idData, horarioInicio, horarioFim, status)
-VALUES
-    (1, '08:00:00', '09:00:00', 'Disponível'),
-    (2, '09:30:00', '10:30:00', 'Disponível'),
-    (3, '11:00:00', '12:00:00', 'Disponível'),
-    (4, '13:00:00', '14:00:00', 'Disponível'),
-    (5, '14:30:00', '15:30:00', 'Disponível'),
-    (6, '16:00:00', '17:00:00', 'Disponível'),
-    (7, '17:30:00', '18:30:00', 'Disponível'),
-    (8, '19:00:00', '20:00:00', 'Disponível'),
-    (9, '20:30:00', '21:30:00', 'Disponível'),
-    (10, '22:00:00', '23:00:00', 'Disponível');
+-- Inserir 20 horários
+INSERT INTO horario (idData, horarioInicio, horarioFim, status) VALUES
+(1, '08:00:00', '09:00:00', 'Disponível'),
+(2, '09:00:00', '10:00:00', 'Disponível'),
+(3, '10:00:00', '11:00:00', 'Disponível'),
+(4, '11:00:00', '12:00:00', 'Disponível'),
+(5, '13:00:00', '14:00:00', 'Disponível'),
+(6, '14:00:00', '15:00:00', 'Disponível'),
+(7, '15:00:00', '16:00:00', 'Disponível'),
+(8, '16:00:00', '17:00:00', 'Disponível'),
+(9, '08:00:00', '09:00:00', 'Disponível'),
+(10, '09:00:00', '10:00:00', 'Disponível'),
+(11, '10:00:00', '11:00:00', 'Disponível'),
+(12, '11:00:00', '12:00:00', 'Disponível'),
+(13, '13:00:00', '14:00:00', 'Disponível'),
+(14, '14:00:00', '15:00:00', 'Disponível'),
+(15, '15:00:00', '16:00:00', 'Disponível'),
+(16, '16:00:00', '17:00:00', 'Disponível'),
+(17, '08:00:00', '09:00:00', 'Disponível'),
+(18, '09:00:00', '10:00:00', 'Disponível'),
+(19, '10:00:00', '11:00:00', 'Disponível'),
+(20, '11:00:00', '12:00:00', 'Disponível');

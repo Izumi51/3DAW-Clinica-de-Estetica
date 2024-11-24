@@ -77,8 +77,6 @@ function alterar(id) {
             } else
                 console.log("Requisicao falhou: " + this.status);
         }
-        console.log(id);
-
         xmlhttp.open("POST", "http://localhost/3DAW-Clinica-de-Estetica/funcionario/src/php/alterar.php");
         xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xmlhttp.send("id=" + id + "&salario=" + salario + "&setor=" + setor);
@@ -101,7 +99,6 @@ function excluir(id) {
     xmlhttp.open("POST", "http://localhost/3DAW-Clinica-de-Estetica/funcionario/src/php/excluir.php");
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send("id=" + id);
-    console.log("teste");
 }
 
 function listarTodos() {
@@ -168,7 +165,6 @@ function CriarLinhaTabela(data) {
         table.appendChild(tr);
     });
 }
-
 
 function displayIncluir() {
     document.getElementById("includeTable").style.display = "block";

@@ -9,13 +9,9 @@
     if ($conexao->connect_error) {  
         die ("Conexao Falhou!");
     } else {   
-        $data = $_POST["data"];
+        $tipo = $_POST["tipo"];
         
-        $comando = "SELECT DISTINCT s.*
-                    FROM servico s 
-                    JOIN data d ON s.idServico = d.idServico
-                    JOIN horario h ON d.idData = h.idData
-                    WHERE h.status = 'Disponível'  AND d.dataServico = '" . $data ."'";
+        $comando = "SELECT * FROM `servico` WHERE tipo = '" . $tipo . "'";
 
         $resultado = $conexao->query($comando);
 

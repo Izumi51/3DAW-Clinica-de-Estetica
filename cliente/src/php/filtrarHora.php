@@ -10,8 +10,8 @@
         die ("Conexao Falhou!");
     } else {   
         $hora = $_POST["hora"];
-        $hora = '16:30:00'; // apagar
-        $comando = "SELECT s.* FROM servico s 
+
+        $comando = "SELECT DISTINCT s.* FROM servico s 
                     JOIN data d ON s.idServico = d.idServico
                     JOIN horario h ON d.idData = h.idData 
                     WHERE h.status = 'Disponível' AND '" . $hora ."' BETWEEN h.horarioInicio AND h.horarioFim";

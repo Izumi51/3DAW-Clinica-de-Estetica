@@ -27,33 +27,35 @@
     </header>
 
     <main>
-        <h1>Encontre o serviço <strong>IDEAL</strong>para você!</h1>
-        
+        <h1 class="page-title">Encontre o serviço <strong>IDEAL</strong> para você!</h1>
+
         <section class="services">
             <section class="filters"> 
-                <h1>Filtrar por</h1>
-                <div id="listaServicos">
-                    <p>SERVIÇOS</p>
+                <h1 class="title-fil">Filtrar Por: </h1>
+                <div id="listaServicos" class="listaServicos">
+                    <h3>SERVIÇOS</h3>
                 </div>
 
-                <div id="listaProfissionais">
-                    <p>PROFISSIONAL</p><br>
+                <div id="listaProfissionais" class="listaProfissionais">
+                    <h3>PROFISSIONAL</h3>
                 </div>
 
-                <div>
-                    <label for="dataFiltro">Escolha uma data:</label><br>
-                    <input type="date" id="dataFiltro" name="dataFiltro"><br>
+                <div class="dataFiltro">
+                    <label for="dataFiltro">Escolha uma data:</label>
+                    <input type="date" id="dataFiltro" name="dataFiltro">
                     <button onclick="filtrarPorData()">Filtrar</button>
                 </div>
 
-                <div>
-                    <label for="horaFiltro">Escolha uma hora:</label><br>
-                    <input type="time" id="horaFiltro" name="horaFiltro"><br>
+                <div class="horaFiltro">
+                    <label for="horaFiltro">Escolha uma hora:</label>
+                    <input type="time" id="horaFiltro" name="horaFiltro">
                     <button onclick="filtrarPorHora()">Filtrar</button>
                 </div>
             </section>
             
-            <section class="cards"> 
+            <div class="vertical-line"></div>
+
+            <section id="cards" class="cards"> 
                 
             </section>
         </section>

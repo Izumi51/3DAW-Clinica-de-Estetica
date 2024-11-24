@@ -6,10 +6,12 @@
     --deep-gray : #333;
     --white : #fff;
     --black: #000;
-    --gray: #444;
+    --gray: #444;   
     --light-pink : #fdeeea;
     --blue: #007bff;
     --dark-blue: #0056b3;
+    --purple: #BE7DFF;
+    --bk-services: #FACEBD;
 }
 
 *, html,
@@ -80,8 +82,146 @@ nav a {
 
 /*------MAIN------*/
 main {
-    max-width: 80%;
-    margin: auto;
+    max-width: 90%;
+    margin: 50px auto;
+}
+
+
+
+.page-title {
+    color: var(--black);
+    margin-bottom: 40px
+}
+
+.page-title strong {
+    color: var(--purple);
+}
+
+.services {
+    display: flex;
+    background-color: var(--bk-services);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.filters {
+    width: 18%;
+}
+
+.title-fil {
+    font-size: 1.8em;
+    color: var(--black);
+    text-decoration: underline;
+}
+
+.listaProfissionais, .listaServicos {
+    margin-top: 10px;
+}
+
+.horaFiltro, .dataFiltro {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.horaFiltro label, 
+.dataFiltro label {
+    font-weight: bold;
+}
+
+.horaFiltro button, 
+.dataFiltro button{
+    background-color: var(--dark-blue);
+    color: var(--white);
+    border: 2px solid var(--dark-blue);
+    width: 50%;
+    align-self: flex-end;
+}
+
+.horaFiltro button:hover,
+.dataFiltro button:hover{
+    background-color: var(--white);
+    color: var(--dark-blue);
+    border: 2px solid var(--dark-blue);
+    width: 50%;
+    align-self: flex-end;
+}
+
+.checkbox {
+    margin: 5px;
+}
+
+.vertical-line {
+    width: 2px;
+    height: auto;
+    background-color: var(--gray);
+    margin: 10px 20px;
+}
+
+.cards {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 30%;
+    max-height: 550px;
+    height: auto;
+    margin: 10px;
+    border: 2px solid;
+    border-radius: 20px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    background: linear-gradient(to bottom, white, rgba(128, 0, 128, 0));
+}
+
+.card div img {
+    width: 180px;
+    aspect-ratio: 1/1;
+}
+
+.card div h1 {
+    text-align: center;
+}
+
+.card p {
+    width: 80%;
+    text-align: justify;
+}
+
+.card hr {
+    width: 90%;
+}
+
+.card h2 {
+    font-size: 1.5em;
+    align-self: self-start;
+    margin: 0;
+    margin-left: 20px;
+}
+
+.comprar-button {
+    align-self: flex-end;
+    width: 40%;
+    padding: 5px;
+    font-size: 1.0rem;
+    background-color: #4169E1;
+    color: white;
+    border: 2px solid #4169E1;
+    border-radius: 10px;
+    text-align: center;
+    transition: 300ms ease-in;
+}
+
+.comprar-button:hover{
+    background-color: white;
+    color: #4169E1;
 }
 
 /* Rodapé */
