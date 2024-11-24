@@ -68,3 +68,45 @@ WHERE s.tipo = 'Corte de cabelo' AND d.dataServico = '2024-11-23' AND h.status =
 UPDATE horario
 SET status = 'Agendado'
 WHERE idData = 1 AND horarioInicio = '09:00:00';
+
+-- Inserir dados na tabela servico
+INSERT INTO servico (tipo, altImagem, caminho, nomeFuncionario, preco)
+VALUES
+    ('Corte de cabelo', 'corte.jpg', 'caminho/corte', 'Carlos Silva', 50.00),
+    ('Manicure', 'manicure.jpg', 'caminho/manicure', 'Ana Costa', 40.00),
+    ('Massagem', 'massagem.jpg', 'caminho/massagem', 'Mariana Alves', 120.00),
+    ('Pedicure', 'pedicure.jpg', 'caminho/pedicure', 'Luciana Souza', 45.00),
+    ('Hidratação capilar', 'hidratacao.jpg', 'caminho/hidratacao', 'Carlos Silva', 80.00),
+    ('Design de sobrancelha', 'sobrancelha.jpg', 'caminho/sobrancelha', 'Ana Costa', 30.00),
+    ('Depilação', 'depilacao.jpg', 'caminho/depilacao', 'Mariana Alves', 60.00),
+    ('Barba', 'barba.jpg', 'caminho/barba', 'Carlos Silva', 25.00),
+    ('Maquiagem', 'maquiagem.jpg', 'caminho/maquiagem', 'Luciana Souza', 100.00),
+    ('Corte infantil', 'corte_infantil.jpg', 'caminho/corte_infantil', 'Mariana Alves', 40.00);
+
+-- Inserir dados na tabela data (relacionando com os serviços já inseridos)
+INSERT INTO data (idServico, dataServico, descricao)
+VALUES
+    (1, '2024-11-25', 'Corte de cabelo masculino'),
+    (2, '2024-11-26', 'Manicure para noivas'),
+    (3, '2024-11-27', 'Massagem relaxante'),
+    (4, '2024-11-28', 'Pedicure estética'),
+    (5, '2024-11-29', 'Hidratação capilar intensa'),
+    (6, '2024-11-30', 'Design de sobrancelhas para formatura'),
+    (7, '2024-12-01', 'Depilação completa'),
+    (8, '2024-12-02', 'Corte de barba e cabelo'),
+    (9, '2024-12-03', 'Maquiagem para evento'),
+    (10, '2024-12-04', 'Corte infantil para meninos');
+
+-- Inserir dados na tabela horario (relacionando com as datas já inseridas)
+INSERT INTO horario (idData, horarioInicio, horarioFim, status)
+VALUES
+    (1, '08:00:00', '09:00:00', 'Disponível'),
+    (2, '09:30:00', '10:30:00', 'Disponível'),
+    (3, '11:00:00', '12:00:00', 'Disponível'),
+    (4, '13:00:00', '14:00:00', 'Disponível'),
+    (5, '14:30:00', '15:30:00', 'Disponível'),
+    (6, '16:00:00', '17:00:00', 'Disponível'),
+    (7, '17:30:00', '18:30:00', 'Disponível'),
+    (8, '19:00:00', '20:00:00', 'Disponível'),
+    (9, '20:30:00', '21:30:00', 'Disponível'),
+    (10, '22:00:00', '23:00:00', 'Disponível');

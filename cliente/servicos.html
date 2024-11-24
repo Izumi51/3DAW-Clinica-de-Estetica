@@ -34,11 +34,22 @@
                 <h1>Filtrar por</h1>
                 <div id="listaServicos">
                     <p>SERVIÇOS</p>
-
                 </div>
 
                 <div id="listaProfissionais">
                     <p>PROFISSIONAL</p><br>
+                </div>
+
+                <div>
+                    <label for="dataFiltro">Escolha uma data:</label><br>
+                    <input type="date" id="dataFiltro" name="dataFiltro"><br>
+                    <button onclick="filtrarPorData()">Filtrar</button>
+                </div>
+
+                <div>
+                    <label for="horaFiltro">Escolha uma hora:</label><br>
+                    <input type="time" id="horaFiltro" name="horaFiltro"><br>
+                    <button onclick="filtrarPorHora()">Filtrar</button>
                 </div>
             </section>
             
