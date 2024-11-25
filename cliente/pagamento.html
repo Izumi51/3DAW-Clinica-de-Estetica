@@ -27,8 +27,56 @@
     </header>
 
     <main>
+        <section class="informacoes-compra">
+            <div class="resumo-compra">
+                <div class="foto-compra">Foto da Compra</div>
+                <div class="detalhes-preco">
+                    <h2>Preço</h2>
+                    <p>Serviço X: Data e Hora</p>
+                    <p>Serviço Y: Data e Hora</p>
+                </div>
+            </div>
+            <div class="informacoes-adicionais">
+                <p><strong>Nome do(s) Serviço(s):</strong></p>
+                <p><strong>Loja Selecionada:</strong></p>
+                <p><strong>Profissional Selecionado:</strong></p>
+                <p><strong>Tolerância de Atraso:</strong></p>
+                <p><strong>Limite para Reembolso:</strong></p>
+            </div>
+        </section>
 
+        <section class="forma-pagamento">
+            <h2>Forma de Pagamento</h2>
+            <form>
+                <label for="titular-cartao">Titular:</label>
+                <input type="text" id="titular-cartao" name="titular-cartao" required>
+
+                <label for="cpf">CPF/CNPJ:</label>
+                <input type="text" id="cpf" name="cpf" required>
+
+                <label for="numero-cartao">Nº do Cartão:</label>
+                <input type="text" id="numero-cartao" name="numero-cartao" required>
+
+                <label for="validade-cartao">Validade (MM/AAAA):</label>
+                <input type="text" id="validade-cartao" name="validade-cartao" required>
+
+                <label for="codigo-cartao">Código:</label>
+                <input type="text" id="codigo-cartao" name="codigo-cartao" required>
+
+                <div class="opcao-credito">
+                    <input type="checkbox" id="usar-credito" name="usar-credito">
+                    <label for="usar-credito">Usar crédito da conta (R$XX,XX disponíveis)</label>
+                </div>
+
+                <button type="submit">Confirmar Pagamento</button>
+            </form>
+        </section>
+
+        <section class="mensagem">
+            <p>Querido cliente, é com grande alegria...</p>
+        </section>
     </main>
+
 
     <footer>
         <div class="footer-content">
