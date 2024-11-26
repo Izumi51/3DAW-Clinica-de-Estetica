@@ -1,3 +1,0 @@
-nome;cpf;matricula;data;
-Filipe Rodrigues Albuquerque;12500266796;1234;01/07/2004
-Kaio Aguiar Oliveira Mesquita;13375803761;5678;01/07/2006
