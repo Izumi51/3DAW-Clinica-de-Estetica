@@ -47,6 +47,14 @@ CREATE TABLE horario (
     FOREIGN KEY (idData) REFERENCES data(idData)
 );
 
+CREATE TABLE pagamento (
+    nome_titular VARCHAR(50) NOT NULL,
+    cpf_cnpj VARCHAR(14) NOT NULL PRIMARY KEY,
+    numero_cartao VARCHAR(16) NOT NULL,
+    validade DATE NOT NULL, 
+    codigo_seguranca CHAR(3) NOT NULL 
+);
+
 -- -- Consultar todos os horários disponíveis para um serviço específico em uma data:
 -- SELECT h.horarioInicio, h.horarioFim, h.status
 -- FROM horario h

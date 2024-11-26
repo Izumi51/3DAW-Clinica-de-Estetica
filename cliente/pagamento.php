@@ -1,3 +1,51 @@
+<?php
+// Conexão com o banco de dados
+$servidor = "localhost";
+$user = "root";
+$senha = "";
+$database = "funcionarios";
+
+$conexao = new mysqli($servidor, $user, $senha, $database);
+
+if ($conexao->connect_error) {
+    die("Conexão falhou: " . $conexao->connect_error);
+}
+
+// Recuperar o ID do serviço ou outra informação
+if (isset($_GET['servico_id'])) {
+    $servico_id = $_GET['servico_id'];
+
+    // Consulta para obter as informações do serviço
+    $query = "SELECT s.tipo, s.descricao, s.nomeFuncionario, s.preco, d.dataServico, h.horarioInicio, h.horarioFim
+              FROM servico s
+              JOIN data d ON s.idServico = d.idServico
+              JOIN horario h ON d.idData = h.idData
+              WHERE s.idServico = $servico_id AND h.status = 'Disponível'"; // Status 'Disponível' para horários disponíveis
+
+    $resultado = $conexao->query($query);
+
+    if ($resultado->num_rows > 0) {
+        // Armazenar os dados do serviço, data e horário
+        $dados_servico = $resultado->fetch_assoc();
+        $nome_servico = $dados_servico['tipo'];
+        $descricao_servico = $dados_servico['descricao'];
+        $nome_profissional = $dados_servico['nomeFuncionario'];
+        $preco = $dados_servico['preco'];
+        $data_servico = $dados_servico['dataServico'];
+        $horario_inicio = $dados_servico['horarioInicio'];
+        $horario_fim = $dados_servico['horarioFim'];
+    } else {
+        echo "Serviço ou horário não encontrado.";
+    }
+} else {
+    echo "ID do serviço não fornecido.";
+}
+
+$conexao->close();
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -27,26 +75,26 @@
     </header>
 
     <main>
-        <section class="informacoes-compra">
+    <section class="informacoes-compra">
             <div class="resumo-compra">
                 <div class="foto-compra">Foto da Compra</div>
                 <div class="detalhes-preco">
-                    <h2>Preço</h2>
-                    <p>Serviço X: Data e Hora</p>
+                    <h2>Preço: R$ <?php echo number_format($preco, 2, ',', '.'); ?></h2>
+                    <p><strong>Serviço:</strong> <?php echo $nome_servico; ?></p>
+                    <p><strong>Profissional:</strong> <?php echo $nome_profissional; ?></p>
+                    <p><strong>Data e Hora:</strong> <?php echo date("d/m/Y", strtotime($data_servico)) . " às " . $horario_inicio; ?></p>
                 </div>
             </div>
             <div class="informacoes-adicionais">
-                <p><strong>Nome do(s) Serviço(s):</strong></p>
-                <p><strong>Loja Selecionada:</strong></p>
-                <p><strong>Profissional Selecionado:</strong></p>
-                <p><strong>Tolerância de Atraso:</strong></p>
-                <p><strong>Limite para Reembolso:</strong></p>
+                <p><strong>Nome do Serviço:</strong> <?php echo $nome_servico; ?></p>
+                <p><strong>Profissional Selecionado:</strong> <?php echo $nome_profissional; ?></p>
+                <p><strong>Tolerância de Atraso: 30 min antes do horário marcado</strong></p>
             </div>
         </section>
 
         <section class="forma-pagamento">
             <h2>Forma de Pagamento</h2>
-            <form>
+            <form id="form-pagamento" method="POST" action="src/php/processarPagamento.php">
                 <label for="titular-cartao">Titular:</label>
                 <input type="text" id="titular-cartao" name="titular-cartao" required>
                 <br>
@@ -56,19 +104,15 @@
                 <label for="numero-cartao">Nº do Cartão:</label>
                 <input type="text" id="numero-cartao" name="numero-cartao" required>
                 <br>
-                <label for="validade-cartao">Validade (MM/AAAA):</label>
+                <label for="validade-cartao">Validade (MM/AA):</label>
                 <input type="text" id="validade-cartao" name="validade-cartao" required>
                 <br>
-                <label for="codigo-cartao">Código:</label>
+                <label for="codigo-cartao">Código de Segurança:</label>
                 <input type="text" id="codigo-cartao" name="codigo-cartao" required>
                 <br>
-                <div class="opcao-credito">
-                    <input type="checkbox" id="usar-credito" name="usar-credito">
-                    <label for="usar-credito">Usar crédito da conta (R$XX,XX disponíveis)</label>
-                </div>
-
+            
                 <button type="submit">Confirmar Pagamento</button>
-            </form>
+            </form>            
         </section>
 
         <section class="mensagem">
