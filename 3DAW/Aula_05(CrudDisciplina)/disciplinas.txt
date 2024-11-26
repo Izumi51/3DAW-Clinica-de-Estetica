@@ -1,2 +1,0 @@
-nome;sigla;carga
-Fundamentos Algoritmos de Programação;1FAC;80

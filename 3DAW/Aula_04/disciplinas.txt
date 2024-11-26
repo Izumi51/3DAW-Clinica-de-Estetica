@@ -1,3 +1,0 @@
-nome;sigla;carga
-Desenvolvimento de Aplicações Web;3DAW;80
-Fundamentos Algoritmos de Programação;1FAC;80
