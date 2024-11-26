@@ -228,13 +228,10 @@ function filtrarPorProfissional(profiss, id) {
 
 //
 function contratar(id) {
-    // Verifique se o localStorage está disponível
     if (typeof(Storage) !== "undefined") {
-        localStorage.setItem('idServico', id); // Salvar o ID do serviço no localStorage
-        window.location.href = 'contratar.html'; // Redirecionar para a página contratar.html
+        localStorage.setItem('idServico', id);
+        window.location.href = 'contratar.html';
     } else {
         alert("Seu navegador não suporta armazenamento local. Atualize-o!");
     }
 }
-//
-
