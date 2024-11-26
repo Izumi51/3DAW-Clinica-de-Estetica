@@ -40,6 +40,7 @@ function carregarDadosPag(datas) {
 }
 
 function processarPagamento() {
+    const idServico = localStorage.getItem("idServico");
     const titularCartao = localStorage.getItem("titular-cartao");
     const cpf = localStorage.getItem("cpf");
     const numeroCartao = localStorage.getItem("numero-cartao");
@@ -58,5 +59,5 @@ function processarPagamento() {
 
     xmlhttp.open("POST", "http://localhost/3DAW-Clinica-de-Estetica/cliente/src/php/processarPagamento.php");
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xmlhttp.send("titularCartao=" + titularCartao + "&cpf=" + cpf + "&numeroCartao=" + numeroCartao + "&validadCartao=" + validadCartao + "&codigoCartao=" + codigoCartao);
+    xmlhttp.send("id=" + idServico + "&titularCartao=" + titularCartao + "&cpf=" + cpf + "&numeroCartao=" + numeroCartao + "&validadCartao=" + validadCartao + "&codigoCartao=" + codigoCartao);
 }

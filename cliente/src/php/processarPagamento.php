@@ -11,6 +11,7 @@
     } else {  
         if ($_SERVER["REQUEST_METHOD"] == "POST") 
         {
+            $id = $_POST["id"];
             $nome_titular = $_POST["titularCartao"];
             $cpf_cnpj = $_POST["cpf"];
             $numero_cartao = $_POST["numeroCartao"];
@@ -19,7 +20,11 @@
 
             $comando = "INSERT INTO `pagamento` (`nome_titular`, `cpf_cnpj`, `numero_cartao`, `validade`, `codigo_seguranca`)
                         VALUES ('" . $nome_titular . "','" . $cpf_cnpj . "','" . $numero_cartao . "','" . $validade . "','" . $codigo_seguranca. "')";
-            $resultado = $conexao->query ($comando);
+            $conexao->query ($comando);
+
+            $comando = "UPDATE `horario` SET status = 'Agendado'
+                        WHERE idData = '" . $id . "'";
+            $conexao->query ($comando);
         }
     }
 ?>
