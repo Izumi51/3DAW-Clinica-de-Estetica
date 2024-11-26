@@ -180,26 +180,9 @@ footer {
     gap: 15px;
 }
 
-.footer-content .btn-trabalhe {
-    background-color: var(--blue);
-    color: var(--white);
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.footer-content .btn-trabalhe:hover {
-    background-color: var(--dark-blue);
-}
-
-.footer-content .contact p,
-.footer-content .payment p {
-    margin: 5px 0;
-}
-
 .footer-content img {
     margin: 5px;
+    aspect-ratio: 1/1;
     width: 60px;
     height: 40px;
 }
