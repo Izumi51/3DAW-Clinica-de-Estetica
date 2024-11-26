@@ -1,0 +1,166 @@
+:root {
+    /*------background colors------*/
+    --white: #ffffff;
+    --gray: #D9D9D9;
+    --light-black: #373737;
+    --black: #000000;
+
+    /*------font size------*/
+    --small: 0.9rem;
+    --large: 1.3rem;
+}
+
+/*-------Reset CSS Proprieties------*/
+
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*------BODY------*/
+body {
+    font-family: sans-serif;
+    background-color: var(--gray);
+    padding-bottom: 50px;
+}
+
+/*------HEADER------*/
+header {
+    height: 70px;
+    background-color: var(--light-black);
+    color: var(--white);
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+header ul {
+    padding: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: var(--small);
+}
+
+/*------MAIN------*/
+main {
+    width: 80%;
+    margin: auto;
+}
+
+h1 {
+    color: var(--black);
+}
+
+table {
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+    background-color: var(--white);
+    scrollbar-width: auto;
+    
+}
+
+table, tbody, thead, th, td {
+    border:1px solid black;
+    border-collapse: collapse;
+    padding: 10px 30px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.btn-alterar {
+    border: 2px solid;
+    border-radius: 5px;
+    background-color: rgb(35, 35, 209);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.btn-alterar:hover {
+    border: 2px solid rgb(35, 35, 209);
+    background-color: var(--white);
+    color: rgb(35, 35, 209);
+    cursor: pointer;
+}
+
+.btn-excluir {
+    border: 2px solid;
+    border-radius: 5px;
+    background-color: rgb(224, 32, 32);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.btn-excluir:hover {
+    border: 2px solid rgb(224, 32, 32);
+    background-color: var(--white);
+    color: rgb(224, 32, 32);
+    cursor: pointer;
+}
+
+.btn-end {
+    display: flex;
+    justify-content: end;
+    cursor: pointer;
+}
+
+.btn-act {
+    margin: 10px;
+    padding: 5px 10px;
+    font-size: var(--large);
+    border-radius: 10px;
+    border: 2px solid;
+    background-color: var(--black);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.altForm {
+    cursor: pointer;
+}
+
+.btn-act:hover {
+    transition: 300ms;
+    border: 2px solid var(--black);
+    background-color: var(--white);
+    color: var(--black);
+    cursor: pointer;
+}
+
+.formAlterar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.formAlterar div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 300px;
+    padding: 15px;
+    border: 2px solid var(--black);
+    border-radius: 15px;
+    background-color: var(--white);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+}

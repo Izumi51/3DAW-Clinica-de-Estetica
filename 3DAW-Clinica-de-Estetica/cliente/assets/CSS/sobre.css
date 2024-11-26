@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400&family=Roboto:wght@300&display=swap');
+
+:root {
+    /*------colors------*/
+    --bk-color: #FAEDE8;
+    --deep-gray : #333;
+    --white : #fff;
+    --black: #000;
+    --gray: #444;
+    --light-pink : #fdeeea;
+    --blue: #007bff;
+    --dark-blue: #0056b3;
+}
+
+*, html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/*------BODY------*/
+body {
+    background-color: var(--bk-color);
+    color: #333;
+    line-height: 1.6;
+}
+
+/*------HEADER------*/
+.svg-container {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.svg-container svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    font-weight: 300;
+    color: var(--deep-gray);
+    text-shadow: 1px 1px 5px rgba(44, 31, 31, 0.5);
+    text-align: center;
+
+}
+
+.nav-container {
+    position: absolute;
+    top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+
+nav a {
+    margin-left: 15px;
+    font-size: 18px;
+    text-decoration: none;
+    color: var(--black);
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    transition: color 0.3s ease;
+}
+
+.active, nav a:hover {
+    color: var(--black);
+    font-weight: bold;
+}
+
+/*------MAIN------*/
+main {
+    max-width: 80%;
+    margin: auto;
+}
+
+.sobre {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
+}
+
+.sobre h1 {
+    margin: 20px;
+    width: 250px;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 2.5rem;
+    font-weight: lighter;
+}
+
+.place {
+    max-width: 300px;
+    font-size: 2.5rem;
+    font-weight: lighter;
+    border-radius: 20px;
+}
+
+.place--top {
+    margin-top: 60px;
+}
+
+.place--bottom {
+    margin-bottom: 60px;
+}
+
+.logo-central {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-central img {
+    width: 400px;
+}
+
+/* linha vertical */
+.vertical-line {
+    width: 2px;
+    height: 150px;
+    background-color: black;
+    margin: 20px auto;
+}
+
+.descricao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 80%;
+    margin: 30px auto;
+}
+
+
+.inverse {
+    flex-direction: row-reverse; 
+}
+
+.desc-text {
+    padding: 50px;
+    text-align: justify;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.desc-text strong {
+    color: var(--black);
+}
+.img-text {
+    aspect-ratio: 1/1;
+    max-width: 35%;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Rodapé */
+footer {
+    margin-top: 50px;
+    background-color: var(--black);
+    color: var(--white);
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-content .btn-trabalhe {
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-content .btn-trabalhe:hover {
+    background-color: var(--dark-blue);
+}
+
+.footer-content .contact p,
+.footer-content .payment p {
+    margin: 5px 0;
+}
+
+.footer-content img {
+    margin: 5px;
+    width: 60px;
+    height: 40px;
+}
