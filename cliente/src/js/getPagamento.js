@@ -40,12 +40,12 @@ function carregarDadosPag(datas) {
 }
 
 function processarPagamento() {
-    const idServico = localStorage.getItem("idServico");
-    const titularCartao = localStorage.getItem("titular-cartao");
-    const cpf = localStorage.getItem("cpf");
-    const numeroCartao = localStorage.getItem("numero-cartao");
-    const validadCartao = localStorage.getItem("validade-cartao");
-    const codigoCartao = localStorage.getItem("codigo-cartao");
+    const idServico = localStorage.getItem("idServico");        
+    const titularCartao = document.getElementById("titular-cartao").value;
+    const cpf = document.getElementById("cpf").value;
+    const numeroCartao = document.getElementById("numero-cartao").value;
+    const validadCartao = document.getElementById("validade-cartao").value;
+    const codigoCartao = document.getElementById("codigo-cartao").value;
 
     let xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
