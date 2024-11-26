@@ -28,48 +28,45 @@
     </header>
 
     <main>
-    <section class="informacoes-compra">
+        <section class="informacoes-compra">
             <div id="resumo-compra" class="resumo-compra">
             </div>
-            <div id="informacoes-adicionais" class="informacoes-adicionais">
-            </div>
         </section>
-s
+        
         <section class="forma-pagamento">
             <h2>Forma de Pagamento</h2>
-            <form id="form-pagamento" method="POST" action="src/php/processarPagamento.php">
-                <label for="titular-cartao">Titular:</label>
+            <form id="form-pagamento" method="POST">
+                <label for="titular-cartao">Titular:</label><br>
                 <input type="text" id="titular-cartao" name="titular-cartao" required>
                 <br>
-                <label for="cpf">CPF/CNPJ:</label>
+                <label for="cpf">CPF/CNPJ:</label><br>
                 <input type="text" id="cpf" name="cpf" required>
                 <br>
-                <label for="numero-cartao">Nº do Cartão:</label>
+                <label for="numero-cartao">Nº do Cartão:</label><br>
                 <input type="text" id="numero-cartao" name="numero-cartao" required>
                 <br>
-                <label for="validade-cartao">Validade (MM/AA):</label>
+                <label for="validade-cartao">Validade (MM/AA):</label><br>
                 <input type="text" id="validade-cartao" name="validade-cartao" required>
                 <br>
-                <label for="codigo-cartao">Código de Segurança:</label>
+                <label for="codigo-cartao">Código de Segurança:</label><br>
                 <input type="text" id="codigo-cartao" name="codigo-cartao" required>
                 <br>
             
-                <button type="submit">Confirmar Pagamento</button>
+                <button onclick="processarPagamento()" type="button">Confirmar Pagamento</button>
             </form>            
         </section>
 
         <section class="mensagem">
-            <p><strong>Querido cliente,</strong> 
-                É com grande alegria que recebemos a notícia da sua decisão em escolher os nossos serviços para o seu próximo cuidado de beleza. Queremos expressar nossa sincera gratidão pela confiança que você depositou em nós.  
-                Estamos ansiosos para recebê-lo(a) em breve e proporcionar uma experiência de beleza excepcional. Cada membro da nossa equipe está comprometido em garantir que você se sinta especial e saia do nosso salão ainda mais radiante. A sua preferência é a maior motivação para nós.  
-                Trabalharemos arduamente para superar as suas expectativas. Caso haja algum detalhe específico que você gostaria de discutir ou personalizar, estamos sempre dispostos a adaptar nossos serviços às suas necessidades.  
-                Agradecemos novamente por nos escolher como o seu destino de beleza. Mal podemos esperar para servi-lo(a) e garantir que a sua experiência seja memorável.  
-                Se precisar de qualquer informação adicional antes da sua visita, não hesite em entrar em contato. Estamos aqui para tornar a sua experiência conosco o mais agradável possível.  
+            <p><strong>Querido cliente,</strong>  
+                Agradecemos sinceramente por <strong>escolher nossos serviços</strong> para o seu próximo cuidado de beleza. Estamos <strong>ansiosos para recebê-lo(a)</strong> e proporcionar uma <strong>experiência excepcional</strong>. Cada membro da nossa equipe está comprometido em garantir que você se sinta <strong>especial e radiante</strong>. Sua <strong>preferência é nossa maior motivação</strong>.  
+                <br><br>
+                Se precisar de algo ou tiver algum <strong>detalhe específico</strong> para discutir, estamos à disposição para <strong>personalizar nossos serviços</strong>. Agradecemos por nos escolher e mal podemos esperar para <strong>servi-lo(a) com excelência</strong>.  
+                <br><br>
+                Caso precise de <strong>mais informações</strong> antes da sua visita, não hesite em nos contatar.  
+                <br><br>
                 Atenciosamente,  
-                <strong>Divine Beauty</strong>
-
-                Caso precise de algo mais, é só avisar!
-                clinica.estetica@gmail.com</p>
+                <strong>Divine Beauty</strong>  
+                clinica.estetica@gmail.com</p>                
         </section>
     </main>
 
