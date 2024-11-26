@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Confirmação de Serviço - Clínica Estética</title>
-    <link rel="stylesheet" href="assets/CSS/contratar.css">
+    <title>Pagamento - Clínica Estética</title>
+    <link rel="stylesheet" href="assets/CSS/pagamento.css">
 </head>
 
 <body>
-    <!-- Header -->
     <header class="svg-container">
         <svg viewBox="0 0 1920 253" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M-9.1543 -26.665L1920.54 -84.5264L1927.89 160.53C1139.74 334.345 1257.51 12.7409 -0.784692 252.463L-9.1543 -26.665Z" fill="#F8C5D3" fill-opacity="0.79"/>
@@ -27,37 +26,75 @@
         </section> 
     </header>
 
-    <!-- Main Section -->
     <main>
-        <section class="confirmacao">
-            <h1>Confirmação de Serviço</h1>
-            <p>Seu serviço foi confirmado com sucesso!</p>
-            <div class="detalhes-servico">
-                <h2>Detalhes do Serviço</h2>
-                <p><strong>Serviço:</strong> </p>
-                <p><strong>Data:</strong> </p>
-                <p><strong>Horário:</strong> </p>
-                <p><strong>Profissional:</strong> </p>
+        <section class="informacoes-compra">
+            <div class="resumo-compra">
+                <div class="foto-compra">
+                    Foto da Compra
+                </div>
+                <div class="detalhes-preco">
+                    <h2>Preço</h2>
+                    <p>Serviço X: Data e Hora</p>
+                </div>
             </div>
-            <div class="interativo">
-                <a href="home.html" class="btn">Voltar à Home</a>
-                <a href="servicos.html" class="btn">Explorar Mais Serviços</a>
+            <div class="informacoes-adicionais">
+                <p>Nome do Serviço: </p>
+                <p>Profissional Selecionado: </p>
+                <p>Tolerância de Atraso: 30min antes do horário marcado.</p>
             </div>
+        </section>
+
+        <section class="forma-pagamento">
+            <h2>Forma de Pagamento</h2>
+            <form>
+                <label for="titular-cartao">Titular:</label>
+                <input type="text" id="titular-cartao" name="titular-cartao" required>
+                <br>
+                <label for="cpf">CPF/CNPJ:</label>
+                <input type="text" id="cpf" name="cpf" required>
+                <br>
+                <label for="numero-cartao">Nº do Cartão:</label>
+                <input type="text" id="numero-cartao" name="numero-cartao" required>
+                <br>
+                <label for="validade-cartao">Validade (MM/AA):</label>
+                <input type="text" id="validade-cartao" name="validade-cartao" required>
+                <br>
+                <label for="codigo-cartao">Código de Segurança:</label>
+                <input type="text" id="codigo-cartao" name="codigo-cartao" required>
+                <br>
+                <div class="opcao-credito">
+                    <input type="checkbox" id="usar-credito" name="usar-credito">
+                    <label for="usar-credito">Usar crédito da conta (R$XX,XX disponíveis)</label>
+                </div>
+                <br>
+                <button type="submit">Confirmar Pagamento</button>
+            </form>
+        </section>
+
+        <section class="mensagem">
+            <p><strong> Querido cliente,</strong> 
+                É com grande alegria que recebemos a notícia da sua decisão em escolher os nossos serviços para o seu próximo cuidado de beleza. Queremos expressar nossa sincera gratidão pela confiança que você depositou em nós.
+                Estamos ansiosos para recebê-lo(a) em breve e proporcionar uma experiência de beleza excepcional. Cada membro da nossa equipe está comprometido em garantir que você se sinta especial e saia do nosso salão ainda mais radiante. A sua preferência é a maior motivação para nós.
+                Trabalharemos arduamente para superar as suas expectativas. Caso haja algum detalhe específico que você gostaria de discutir ou personalizar, estamos sempre dispostos a adaptar nossos serviços às suas necessidades.
+                Agradecemos novamente por nos escolher como o seu destino de beleza. Mal podemos esperar para servi-lo(a) e garantir que a sua experiência seja memorável.
+                Se precisar de qualquer informação adicional antes da sua visita, não hesite em entrar em contato. Estamos aqui para tornar a sua experiência conosco o mais agradável possível.
+                Atenciosamente,
+                <strong>Divine Beauty</strong></p>
         </section>
     </main>
 
-    <!-- Footer -->
+
     <footer>
         <div class="footer-content">
             <div class="contact">
-                <p>(21) XXXX-XXXX</p>
-                <p>@clinica.estetica</p>
+                <p> (21) XXXX-XXXX </p>
+                <p> @clinica.estetica </p>
             </div>
             <div class="payment">
                 <p>Funcionamento: Seg - Sáb: 07h - 22h</p>
                 <p>Aceitamos:</p>
-                <img src="assets/images/visa.png" alt="Visa">
-                <img src="assets/images/mastercard.png" alt="Mastercard">
+                <img src="" alt="Visa">
+                <img src="" alt="Mastercard">
             </div>
         </div>
     </footer>
